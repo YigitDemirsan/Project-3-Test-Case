@@ -1,16 +1,18 @@
-Test Case 1: Basic Graph Creation and BFS
-Shortest Path from 'ağız' to 'akıl':
-Path: ağız -> ağızlık -> akıllı -> akıl
+Test Case: Adding Edges with One-Letter Difference (3 letter words)
+Shortest Path from 'cat' to 'dog' (BFS):
+cat -> cot -> dog
+Shortest Path from 'cat' to 'dog' (Dijkstra):
+cat -> cot -> dog
 ------------------------------------------
-
-
-Test Case 2: Words Not in Dictionary
-Shortest Path from 'akrep' to 'akvaryum' (with words not in dictionary):
-No path found between 'akrep' and 'akvaryum'.
+Test Case: Adding Edges with One-Letter Difference (4 letter words)
+Shortest Path from 'dark' to 'barn' (BFS):
+dark -> bark -> barn
+Shortest Path from 'dark' to 'barn' (Dijkstra):
+dark -> bark -> barn
 ------------------------------------------
-
-
-Test Case 3: No Path Between Words
-Shortest Path from 'ala' to 'alabalık' (no path between the words):
-No path found between 'ala' and 'alabalık'.
+Test Case: Adding Edges with One-Letter Difference (5 letter words)
+Shortest Path from 'stone' to 'score' (BFS):
+stone -> store -> score
+Shortest Path from 'stone' to 'score' (Dijkstra):
+stone -> store -> score
 ------------------------------------------
