@@ -1,43 +1,51 @@
 #include <iostream>
-
 int main() {
-    // Test Case 1: Basic Graph Creation and BFS
-    Graph graph1(4);
-    graph1.addWord("ağız");
-    graph1.addWord("ağızlık");
-    graph1.addWord("akıl");
-    graph1.addWord("akıllı");
-    graph1.addEdge("ağız", "ağızlık");
-    graph1.addEdge("ağızlık", "akıllı");
-    graph1.addEdge("akıllı", "akıl");
-
-    std::cout << "Test Case 1: Basic Graph Creation and BFS\n";
-    std::cout << "Shortest Path from 'ağız' to 'akıl':\n";
-    graph1.BFS("ağız", "akıl");
-    std::cout << "------------------------------------------\n";
-
-    // Test Case 2: Words Not in Dictionary
-    Graph graph2(3);
-    graph2.addWord("akrep");
-    graph2.addWord("akustik");
-    graph2.addWord("akvaryum");
-    graph2.addEdge("akrep", "akustik");
-
-    std::cout << "Test Case 2: Words Not in Dictionary\n";
-    std::cout << "Shortest Path from 'akrep' to 'akvaryum' (with words not in dictionary):\n";
-    graph2.BFS("akrep", "akvaryum");
-    std::cout << "------------------------------------------\n";
-
-    // Test Case 3: No Path Between Words
+    // ------------------------------------
+    // DO THE NECESSARY CHANGES ACCORDING TO YOUR IMPLEMENTATION
+    // ------------------------------------
+    // Test Case: Adding Edges with One-Letter Difference (3 letter words)
     Graph graph3(3);
-    graph3.addWord("ala");
-    graph3.addWord("alaca");
-    graph3.addWord("alabalık");
-    graph3.addEdge("ala", "alaca");
+    graph3.addWord("cat");
+    graph3.addWord("cot");
+    graph3.addWord("dog");
+    graph3.addEdge("cat", "cot");
+    graph3.addEdge("cot", "dog");
 
-    std::cout << "Test Case 3: No Path Between Words\n";
-    std::cout << "Shortest Path from 'ala' to 'alabalık' (no path between the words):\n";
-    graph3.BFS("ala", "alabalık");
+    std::cout << "Test Case: Adding Edges with One-Letter Difference (3 letter words)\n";
+    std::cout << "Shortest Path from 'cat' to 'dog' (BFS):\n";
+    graph3.BFS("cat", "dog");
+    std::cout << "Shortest Path from 'cat' to 'dog' (Dijkstra):\n";
+    graph3.Dijkstra("cat", "dog");
+    std::cout << "------------------------------------------\n";
+
+    // Test Case: Adding Edges with One-Letter Difference (4 letter words)
+    Graph graph4(3);
+    graph4.addWord("dark");
+    graph4.addWord("bark");
+    graph4.addWord("barn");
+    graph4.addEdge("dark", "bark");
+    graph4.addEdge("bark", "barn");
+
+    std::cout << "Test Case: Adding Edges with One-Letter Difference (4 letter words)\n";
+    std::cout << "Shortest Path from 'dark' to 'barn' (BFS):\n";
+    graph4.BFS("dark", "barn");
+    std::cout << "Shortest Path from 'dark' to 'barn' (Dijkstra):\n";
+    graph4.Dijkstra("dark", "barn");
+    std::cout << "------------------------------------------\n";
+
+    // Test Case: Adding Edges with One-Letter Difference (5 letter words)
+    Graph graph5(3);
+    graph5.addWord("stone");
+    graph5.addWord("store");
+    graph5.addWord("score");
+    graph5.addEdge("stone", "store");
+    graph5.addEdge("store", "score");
+
+    std::cout << "Test Case: Adding Edges with One-Letter Difference (5 letter words)\n";
+    std::cout << "Shortest Path from 'stone' to 'score' (BFS):\n";
+    graph5.BFS("stone", "score");
+    std::cout << "Shortest Path from 'stone' to 'score' (Dijkstra):\n";
+    graph5.Dijkstra("stone", "score");
     std::cout << "------------------------------------------\n";
 
     return 0;
