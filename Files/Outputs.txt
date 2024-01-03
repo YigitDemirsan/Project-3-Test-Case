@@ -1,0 +1,16 @@
+Test Case 1: Basic Graph Creation and BFS
+Shortest Path from 'ağız' to 'akıl':
+Path: ağız -> ağızlık -> akıllı -> akıl
+------------------------------------------
+
+
+Test Case 2: Words Not in Dictionary
+Shortest Path from 'akrep' to 'akvaryum' (with words not in dictionary):
+No path found between 'akrep' and 'akvaryum'.
+------------------------------------------
+
+
+Test Case 3: No Path Between Words
+Shortest Path from 'ala' to 'alabalık' (no path between the words):
+No path found between 'ala' and 'alabalık'.
+------------------------------------------
