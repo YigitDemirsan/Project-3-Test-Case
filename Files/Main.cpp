@@ -7,9 +7,11 @@ int main() {
     Graph graph3(3);
     graph3.addWord("cat");
     graph3.addWord("cot");
+    graph3.addWord("cog");
     graph3.addWord("dog");
     graph3.addEdge("cat", "cot");
-    graph3.addEdge("cot", "dog");
+    graph3.addEdge("cot", "cog");
+    graph3.addEdge("cog", "dog");
 
     std::cout << "Test Case: Adding Edges with One-Letter Difference (3 letter words)\n";
     std::cout << "Shortest Path from 'cat' to 'dog' (BFS):\n";
